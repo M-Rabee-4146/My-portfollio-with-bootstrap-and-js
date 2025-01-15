@@ -269,9 +269,14 @@ color: white;
 writing-mode: vertical-lr;
 margin: 0 15px;
 }
-.left-icons span{
+.left-icons span a{
     margin:  5px 0;
     color: #cf1f1f;
+    transition: all ease-in-out .34s;
+}
+.left-icons span a:hover{
+    color: white;
+    transform: scale(1.2);
 }
 .left-icons p{
 transform: rotate(0deg);
