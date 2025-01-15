@@ -1,8 +1,11 @@
+
 // const dropdown=document.querySelector('.icon')
+
 // const dropdownMenu=document.querySelector('.links')
 // dropdown.addEventListener('click',()=>{
 //     dropdownMenu.classList.toggle('show')
 // })
+
 const navLinks = document.querySelectorAll('.navlinks');
 document.querySelector('.third-button').addEventListener('click', function () {
     document.querySelector('.animated-icon3').classList.toggle('open');
@@ -134,8 +137,5 @@ document.querySelector('.third-button').addEventListener('click', function () {
     });
   });
 
-  // import gsap from 'gsap';
 
  
-
-  

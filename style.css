@@ -448,25 +448,6 @@ font-family: 'nunito',sans-serif;
     font-family: 'saira';
 
 }
-@media (max-width: 768px) {
-   .container .paragraph {
-       font-size: 20px; 
-    }
-    .container .signature-1{
-        font-size: 15px; 
-        
-    }
-    .images{
-      width: 100%;
-      height: 400px !important;  
-    }
-    .outer-card-5{
-        margin-top: 0 !important;
-    }
-    .outer-card-6{
-        margin-top: 0 !important;
-    }
-}
 
 .what-i-do{
     min-height: 60vh;
@@ -560,7 +541,8 @@ font-family: 'nunito',sans-serif;
     width: 100%;
     height: 100%;    
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     filter: grayscale();
@@ -570,37 +552,37 @@ font-family: 'nunito',sans-serif;
     
 }
 .card1{
-    background: url(./images/mclaren-720s-silverstone-aero-vorsteiner-5k-8k-7500x5480-3452.jpg);  
+    background: url(./images/mclaren-720s-silverstone-aero-vorsteiner-5k-8k-7500x5480-3452.jpg/);  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card2{
-    background: url(./images/3d-heart-abstract-shape-zc.jpg);  
+    background: url(./images/3d-heart-abstract-shape-zc.jpg/);  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card3{
-    background: url(./images/angry-birds-dark-5k-nf.jpg);  
+    background: url(./images/angry-birds-dark-5k-nf.jpg/);  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card4{
-    background: url(./images/angry-birds-dark-5k-nf.jpg);  
+    background: url(./images/angry-birds-dark-5k-nf.jpg/);  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card5{
-    background: url(./images/bmw-csl-8k-colorful-7680x4320-13695.jpg);  
+    background: url(./images/bmw-csl-8k-colorful-7680x4320-13695.jpg/);  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card6{
-    background: url(./images/satoru-gojo-black-7680x4320-14684.png);  
+    background: url(./images/satoru-gojo-black-7680x4320-14684.png/);  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -775,6 +757,62 @@ font-weight: 700;
     color: #cf1f1f !important ;
     box-shadow: 0 0 0px 10px rgba(255, 255, 255, 0.301);
   }
+footer{
+  height: 10vh;
+  background-color: #161a1d;
+  border-top:1px solid #9898982d;
+  font-family: 'nunito',sans-serif;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.copyright h5{ 
+  font-family: 'nunito',sans-serif;
+  font-size: medium;
+  font-weight: 300  ;
+}
+.footer-links a{
+  color: #cf1f1f;
+  margin: 0 5px;
+  font-size: 20px;
+  transition: all ease-in-out .35s;
+  transform: scale(1);
+}
+.footer-links a:hover{
+  color: white;
+  transform: scale(1.5);
+}
+@media (max-width: 768px) {
+  footer{
+    padding:10px
+  }
+  .container .paragraph {
+      font-size: 20px; 
+   }
+   .container .signature-1{
+       font-size: 15px; 
+       
+   }
+   .images{
+     width: 100%;
+     height: 400px !important;  
+   }
+   .outer-card-5{
+       margin-top: 0 !important;
+   }
+   .outer-card-6{
+       margin-top: 0 !important;
+   }
+}
+
   
 
   /* animations */
@@ -801,6 +839,7 @@ animation-timeline: view();
 animation-range-end: 50vh; 
 
 } */
+
 @keyframes fade-in {
     to{
         scale: 1;
