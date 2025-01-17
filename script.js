@@ -23,7 +23,51 @@ document.querySelector('.third-button').addEventListener('click', function () {
 
     });
   });
+  // const c_detail_1=document.querySelector('.card_1')
+  // c_detail_1.addEventListener('click',()=>{
+  //   document.querySelector('.card-detail-1').classList.toggle('open')
+  //   document.querySelector('.myClass').classList.toggle('no-scroll')
+
+  // })
+  // const c_detail_2=document.querySelector('.card_2')
+  // c_detail_1.addEventListener('click',()=>{
+  //   document.querySelector('.card-detail-2').classList.toggle('open')
+  //   document.querySelector('.myClass').classList.toggle('no-scroll')
   
+  // })
+  // const close_btn= document.querySelector('.close-btn')
+  // close_btn.addEventListener('click',()=>{
+    //   document.querySelector('.in-card-bg').classList.toggle('open')      
+    //   document.querySelector('.myClass').classList.toggle('no-scroll')
+    // document.querySelector('.card-detail-2').classList.toggle('open')
+    // document.querySelector('.card-detail-1').classList.toggle('open')
+  
+  // })
+  
+  const cards = document.querySelectorAll('.row-1');
+const cardDetails = document.querySelectorAll('.in-card-bg');
+
+cards.forEach((card, index) => {
+  card.addEventListener('click', () => {
+    cardDetails.forEach((detail, i) => {
+      if (i === index) {
+        detail.classList.add('open');
+          document.querySelector('.myClass').classList.toggle('no-scroll')
+        } else {
+          detail.classList.remove('open');
+          document.querySelector('.myClass').classList.toggle('no-scroll')
+        }
+    });
+  });
+});
+
+cardDetails.forEach(detail => {
+  const closeBtn = detail.querySelector('.close-btn'); 
+
+  closeBtn.addEventListener('click', () => {
+    detail.classList.remove('open');
+  });
+});
   
   // for 1st circle 
   const progress=()=>{
@@ -138,4 +182,31 @@ document.querySelector('.third-button').addEventListener('click', function () {
   });
 
 
+  let sites=[
+    {
+      id:1,
+      title:'Riwaj',
+      image:'./images/1.jpg',
+      description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa porro omnis deserunt, rerum unde, cumque consequatur aspernatur maiores molestiae exercitationem quod perferendis reprehenderit quam fuga voluptatem ea ut! Repellat, dolor.',
+      created:'12/01/2025',
+      type:'Ecommerce'
+    },
+    {
+      id:2,
+      title:'Calculator',
+      image:'./images/2.jpg',
+      description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa porro omnis deserunt, rerum unde, cumque consequatur aspernatur maiores molestiae exercitationem quod perferendis reprehenderit quam fuga voluptatem ea ut! Repellat, dolor.',
+      created:'05/12/2006',
+      type:'Calculator'
+    }
+  ]
  
+  // const rowContainer = document.querySelectorAll('.row-1');
+
+  // sites.forEach(site => {
+  //   for(i=1;i>=6;i++){
+  //     document.classList.add(`outer-card+${i}`)
+  //   }
+  //   const cardElement = createCard(site);
+  //   galleryContainer.appendChild(cardElement);
+  // });

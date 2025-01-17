@@ -177,10 +177,6 @@ header{
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
   }
   
-  .links.open { /* Style for the open state (toggled by JavaScript) */
-    transform: scale(1); /* Scale to full size */
-    opacity: 1; /* Make fully visible */
-  }
   /* .show{
     display: flex;
     transform: scale(1);
@@ -268,6 +264,7 @@ border-left: 1px solid white;
 color: white;
 writing-mode: vertical-lr;
 margin: 0 15px;
+z-index: 98;
 }
 .left-icons span a{
     margin:  5px 0;
@@ -490,8 +487,9 @@ font-family: 'nunito',sans-serif;
     text-align: center;
     color: white;
     padding-top: 30px;
-}
-.gallery{
+    position: relative;
+  }
+  .gallery{
     /* margin: auto; */
 }
 .row-1{
@@ -499,6 +497,18 @@ font-family: 'nunito',sans-serif;
     height: fit-content;
     display: flex;
     justify-content: center;
+
+}
+.cap{
+  height: 100vh;
+  width: 100vw;
+  background: green;
+  position: fixed;
+  /* left: 50%; */
+  /* right: 100%; */
+  /* top: 50%; */
+  transform-origin: center;
+  z-index: 1000;
 
 }
 .outer-card{
@@ -557,37 +567,37 @@ font-family: 'nunito',sans-serif;
     
 }
 .card1{
-    background: url(./images/mclaren-720s-silverstone-aero-vorsteiner-5k-8k-7500x5480-3452.jpg/);  
+    background: url(./images/signupform.png);  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card2{
-    background: url(./images/3d-heart-abstract-shape-zc.jpg/);  
+    background: url(./images/sharpedge50.png);  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card3{
-    background: url(./images/angry-birds-dark-5k-nf.jpg/);  
+    background: url(./images/Desiposh.png);  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card4{
-    background: url(./images/angry-birds-dark-5k-nf.jpg/);  
+    background: url(./images/cover_taskList.png);  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card5{
-    background: url(./images/bmw-csl-8k-colorful-7680x4320-13695.jpg/);  
+    background: url(./images/passwordgenerator.png);  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card6{
-    background: url(./images/satoru-gojo-black-7680x4320-14684.png/);  
+    background: url(./images/Rivaj.png);  
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -596,6 +606,103 @@ font-family: 'nunito',sans-serif;
     filter: grayscale(0);
     transform: scale(1);
     color: white;
+  }
+
+  .in-card-bg{
+    height: 100vh; /* 100% viewport height */
+    width: 100vw; /* 100% viewport width */
+    background: #161a1d; /* Background color */
+    position: fixed; /* Fixed positioning for overlay effect */
+    z-index: 90; /* Ensure menu is above other elements */
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    justify-content: center; /* Center links vertically */
+    align-items: center; /* Center links horizontally */
+    transform: scale(0); /* Initially hidden with scale */
+    opacity: 0; /* Initially hidden with opacity */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
+  bottom: -0%;
+
+  }
+.open{
+
+  transform: scale(1); /* Initially hidden with scale */
+  opacity: 100; /* Initially hidden with opacity */
+}
+.close-btn{
+  position: absolute;
+  left: 93%;
+  top: 15%;
+  /* margin: 10% 0% 0% 98% ; */
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 25px;
+  transition: all ease-in-out .35s;
+}
+.close-btn:hover{
+  color: #cf1f1f;
+  transform: scale(1.2);
+
+}
+.open-btn{
+  background: white;
+  width: 300px;
+  height: 40px;
+  font-weight: 700;
+  border:none;
+border-radius: 5px;
+transition: all ease-in-out .30s;
+}
+.open-btn:hover{
+  color: #cf1f1f;
+box-shadow: 0 0 0px 10px #c3c3c38c;
+}
+.in-card{
+  /* width: 99vw; */
+  padding: 20px;
+  /* border: 1px solid green; */
+}
+.card-img-border{
+padding: 25px;
+  margin:20px 0;
+}
+.img-in-card{
+  /* width: 50%; */
+  /* height:100%; */
+  width: 100%;
+  /* margin:20px 0; */
+  /* background: url(./images/angry-birds-dark-5k-nf.jpg);
+  background-position: center;
+  background-size: cover; */
+}
+.text-in-card{
+  padding: 25px;
+  margin:20px 0;
+  text-align: left;
+}
+.card-heading{
+  font-family: 'saira','nunito',sans-serif;
+  font-size: 25px;
+  color: white;
+}
+.card-para{
+ font-family: 'nunito',sans-serif; 
+ font-size: 17px;
+ color: #989898;
+}
+.list-style{
+  color: #989898;border-bottom: 1px solid #9898982d;
+  margin: 10px 0px;
+  padding:5px ;
+}
+.list-style h5{
+  font-size: 15px;
+  margin: 0;
+}
+.list-style p{
+  margin: 0;
+  font-size: 15px;
 }
 /* --------------------------------- */
 /* ----- Contact -----*/
