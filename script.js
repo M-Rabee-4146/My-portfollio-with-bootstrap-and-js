@@ -46,16 +46,17 @@ document.querySelector('.third-button').addEventListener('click', function () {
   
   const cards = document.querySelectorAll('.row-1');
 const cardDetails = document.querySelectorAll('.in-card-bg');
-
+const scroll_lock= document.querySelector('.myClass')
 cards.forEach((card, index) => {
   card.addEventListener('click', () => {
     cardDetails.forEach((detail, i) => {
       if (i === index) {
         detail.classList.add('open');
-          document.querySelector('.myClass').classList.toggle('no-scroll')
+        // scroll_lock.classList.toggle('no-scroll')
+
         } else {
           detail.classList.remove('open');
-          document.querySelector('.myClass').classList.toggle('no-scroll')
+          // scroll_lock.classList.toggle('no-scroll')
         }
     });
   });
@@ -63,8 +64,12 @@ cards.forEach((card, index) => {
 
 cardDetails.forEach(detail => {
   const closeBtn = detail.querySelector('.close-btn'); 
+  const closeBtn2 = detail.querySelector('.second-close-btn'); 
 
   closeBtn.addEventListener('click', () => {
+    detail.classList.remove('open');
+  });
+  closeBtn2.addEventListener('click', () => {
     detail.classList.remove('open');
   });
 });
@@ -82,7 +87,7 @@ cardDetails.forEach(detail => {
     let timer = setInterval(() => {
       InitialValue += 1;
       
-    CircularBar.style.background = `conic-gradient(#cf1f1f ${
+    CircularBar.style.background = `conic-gradient( var(--main-color-red) ${
       (InitialValue / 100) * 360
     }deg, transparent 0deg)`;
     PercentValue.innerHTML = InitialValue + "%";
@@ -97,13 +102,13 @@ cardDetails.forEach(detail => {
   let PercentValue2 = document.querySelector("#percent2");
   
   let InitialValue2 = 0;
-  let finaleValue2 = 90;
+  let finaleValue2 = 95;
   let speed2 = 20;
   
   let timer2 = setInterval(() => {
     InitialValue2 += 1;
   
-    CircularBar2.style.background = `conic-gradient(#cf1f1f ${
+    CircularBar2.style.background = `conic-gradient( var(--main-color-red) ${
       (InitialValue2 / 100) * 360
     }deg, transparent 0deg)`;
     PercentValue2.innerHTML = InitialValue2 + "%";
@@ -118,13 +123,13 @@ cardDetails.forEach(detail => {
   let PercentValue3 = document.querySelector("#percent3");
   
   let InitialValue3 = 0;
-  let finaleValue3 = 70;
+  let finaleValue3 = 80;
   let speed3 = 20;
   
   let timer3 = setInterval(() => {
     InitialValue3 += 1;
   
-    CircularBar3.style.background = `conic-gradient(#cf1f1f ${
+    CircularBar3.style.background = `conic-gradient( var(--main-color-red) ${
       (InitialValue3 / 100) * 360
     }deg, transparent 0deg)`;
     PercentValue3.innerHTML = InitialValue3 + "%";
@@ -145,7 +150,7 @@ cardDetails.forEach(detail => {
   let timer4 = setInterval(() => {
     InitialValue4 += 1;
   
-    CircularBar4.style.background = `conic-gradient(#cf1f1f ${
+    CircularBar4.style.background = `conic-gradient( var(--main-color-red) ${
       (InitialValue4 / 100) * 360
     }deg, transparent 0deg)`;
     PercentValue4.innerHTML = InitialValue4 + "%";
@@ -181,26 +186,6 @@ cardDetails.forEach(detail => {
     });
   });
 
-
-  let sites=[
-    {
-      id:1,
-      title:'Riwaj',
-      image:'./images/1.jpg',
-      description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa porro omnis deserunt, rerum unde, cumque consequatur aspernatur maiores molestiae exercitationem quod perferendis reprehenderit quam fuga voluptatem ea ut! Repellat, dolor.',
-      created:'12/01/2025',
-      type:'Ecommerce'
-    },
-    {
-      id:2,
-      title:'Calculator',
-      image:'./images/2.jpg',
-      description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa porro omnis deserunt, rerum unde, cumque consequatur aspernatur maiores molestiae exercitationem quod perferendis reprehenderit quam fuga voluptatem ea ut! Repellat, dolor.',
-      created:'05/12/2006',
-      type:'Calculator'
-    }
-  ]
- 
   // const rowContainer = document.querySelectorAll('.row-1');
 
   // sites.forEach(site => {

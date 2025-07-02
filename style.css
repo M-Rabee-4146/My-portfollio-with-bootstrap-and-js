@@ -7,13 +7,17 @@
     /* border: 1px solid green; */
 }
 :root {
-    --h1: 3.5rem;
+--main-color-red:#cf1f1f;
+/* --main-color-red:#2f6fcf; */
+/* --main-color-red:#cf2f6c; */
+
+    /* --h1: 3.5rem;
     --h2: 3rem;
     --h3: 2.145rem;
     --h4: 1.5rem;
     --text-large: 1.6rem;
     --text-medium: 1.275rem;
-    --text-small: 1.125rem;
+    --text-small: 1.125rem;*/
   
     --gradient-brand: radial-gradient(
         at 60% 31%,
@@ -26,7 +30,7 @@
       radial-gradient(at 73% 11%, rgb(115, 255, 225) 0px, transparent 50%),
       radial-gradient(at 49% 37%, rgba(255, 249, 89, 0.695) 0px, transparent 50%),
       radial-gradient(at 70% 21%, rgba(58, 255, 186, 0.715) 0px, transparent 50%);
-    --easing: cubic-bezier(0.86, 0, 0.07, 1);
+    --easing: cubic-bezier(0.86, 0, 0.07, 1); 
   
     --site-max-width: 1280px;
     --gutter-nano: 0.5rem;
@@ -199,15 +203,15 @@ transform: scale(0.5);
     transition: all .35s ease-in-out;
 }
 .links a:hover{
-    color: red;
+    color: var(--main-color-red);
 }
 .text{
     scale: 1 !important;
     color: white;
 }
 .name{
-    font-size: large;
-    color: #cf1f1f;
+    font-size: extralarge;
+    color:  var(--main-color-red);
     font-weight: 600;
 }
 .hero_section{
@@ -268,7 +272,7 @@ z-index: 98;
 }
 .left-icons span a{
     margin:  5px 0;
-    color: #cf1f1f;
+    color:  var(--main-color-red);
     transition: all ease-in-out .34s;
 }
 .left-icons span a:hover{
@@ -289,7 +293,7 @@ transform: rotate(0deg);
     background-color: black; 
   }
   ::-webkit-scrollbar-thumb {
-    background-color: #cf1f1f; 
+    background-color:  var(--main-color-red); 
   }
 
 
@@ -310,7 +314,7 @@ transform: rotate(0deg);
 }
 
 .lines{
-    background: #cf1f1f;
+    background:  var(--main-color-red);
     width: 30px;
     height: 1px;
     position: relative;
@@ -446,7 +450,7 @@ font-family: 'nunito',sans-serif;
     font-family: 'nunito',sans-serif;
 }
 .container .heading{
-    color: #cf1f1f;
+    color:  var(--main-color-red);
     font-family: 'saira';
 
 }
@@ -629,25 +633,40 @@ font-family: 'nunito',sans-serif;
   transform: scale(1); /* Initially hidden with scale */
   opacity: 100; /* Initially hidden with opacity */
 }
-.close-btn{
+.lg-close-btn{
   position: absolute;
   left: 93%;
   top: 15%;
-  /* margin: 10% 0% 0% 98% ; */
   background: transparent;
   color: white;
   border: none;
   font-size: 25px;
+}
+.close-btn{
+  /* margin: 10% 0% 0% 98% ; */
   transition: all ease-in-out .35s;
 }
-.close-btn:hover{
-  color: #cf1f1f;
+
+.lg-close-btn:hover{
+  color:  var(--main-color-red);
   transform: scale(1.2);
 
 }
+.second-close-btn{
+  background: white;
+  width: 100%;
+  height: 40px;
+  font-weight: 700;
+  border:none;
+  border-radius: 5px;
+}
+.second-close-btn:hover{
+  color:  var(--main-color-red);
+box-shadow: 0 0 0px 10px #c3c3c38c;
+}
 .open-btn{
   background: white;
-  width: 300px;
+  width: 100%;
   height: 40px;
   font-weight: 700;
   border:none;
@@ -655,14 +674,18 @@ border-radius: 5px;
 transition: all ease-in-out .30s;
 }
 .open-btn:hover{
-  color: #cf1f1f;
+  color:  var(--main-color-red);
 box-shadow: 0 0 0px 10px #c3c3c38c;
 }
 .in-card{
   /* width: 99vw; */
   padding: 20px;
   /* border: 1px solid green; */
+ 
 }
+ .logo{
+    width:150px;
+ }
 .card-img-border{
 padding: 25px;
   margin:20px 0;
@@ -736,6 +759,7 @@ font-family: 'saira','nunito',sans-serif;
       max-inline-size: 845px;
       margin-inline: auto;
     }
+
   }
   
   .contact-textbox,
@@ -823,7 +847,7 @@ font-family: 'saira','nunito',sans-serif;
     color: var(--sub);
     border: none;
     outline: none;
-    border-bottom: 1px solid #cf1f1f;
+    border-bottom: 1px solid  var(--main-color-red);
     background-color: transparent;
     transition: all ease-in-out .5s;
   }
@@ -866,11 +890,11 @@ font-weight: 700;
     text-align: center;
   }
   .btn-cta:hover{
-    color: #cf1f1f !important ;
+    color:  var(--main-color-red) !important ;
     box-shadow: 0 0 0px 10px rgba(255, 255, 255, 0.301);
   }
 footer{
-  height: 10vh;
+  min-height: 10vh;
   background-color: #161a1d;
   border-top:1px solid #9898982d;
   font-family: 'nunito',sans-serif;
@@ -892,7 +916,7 @@ footer{
   font-weight: 300  ;
 }
 .footer-links a{
-  color: #cf1f1f;
+  color:  var(--main-color-red);
   margin: 0 5px;
   font-size: 20px;
   transition: all ease-in-out .35s;
@@ -903,6 +927,9 @@ footer{
   transform: scale(1.5);
 }
 @media (max-width: 768px) {
+  .bg-pic{
+    background-position:top;
+  }
   footer{
     padding:10px
   }
@@ -925,6 +952,9 @@ footer{
    .container .signature-1{
        font-size: 15px; 
        
+   }
+   .lg-close-btn{
+    display: none;
    }
    .images{
      width: 100%;
